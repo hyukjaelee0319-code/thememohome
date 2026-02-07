@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Memo — The Answering Machine for the Text Era</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #1a1a2e;
+            background: #faf9f7;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            padding: 2rem 2rem 1.5rem;
+            border-bottom: 1px solid #e8e6e1;
+            background: #fff;
+        }
+
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #4a7c6f;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            color: #7a7a8c;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #4a7c6f;
+        }
+
+        .hero {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero-tagline {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #4a7c6f;
+            margin-bottom: 1.25rem;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.75rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #1a1a2e;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5a5a6a;
+            max-width: 540px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .how-it-works {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        .how-it-works h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #f0f5f3;
+            color: #4a7c6f;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #5a5a6a;
+        }
+
+        .cta-section {
+            background: #fff;
+            border-top: 1px solid #e8e6e1;
+            border-bottom: 1px solid #e8e6e1;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            color: #5a5a6a;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-email {
+            display: inline-block;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: #4a7c6f;
+            text-decoration: none;
+            border-bottom: 2px solid #4a7c6f;
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .cta-email:hover {
+            opacity: 0.7;
+        }
+
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            color: #7a7a8c;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #7a7a8c;
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+
+        .footer a:hover {
+            color: #4a7c6f;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .steps { grid-template-columns: 1fr; gap: 2rem; }
+            .nav-links a { margin-left: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">The <span>Memo</span></a>
+            <nav class="nav-links">
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <p class="hero-tagline">Family Communication, Simplified</p>
+        <h1>The answering machine for the text era</h1>
+        <p>The Memo is a home device that lets parents text their kids — and lets kids talk back. No smartphone required.</p>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How it works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Parents text</h3>
+                <p>Send an SMS to your Memo's number, just like texting anyone else.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Kids hear &amp; read</h3>
+                <p>The Memo displays the message on screen and reads it aloud.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Kids reply by voice</h3>
+                <p>Children tap to record a message. It's transcribed and texted back to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <p>The Memo is currently in development. Want to learn more?</p>
+        <a href="mailto:support@thememohome.com" class="cta-email">support@thememohome.com</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 The Memo. All rights reserved.</p>
+        <p>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms &amp; Conditions</a>
+        </p>
+    </footer>
+</body>
+</html>
