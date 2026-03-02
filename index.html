@@ -137,21 +137,134 @@
             color: #5a5a6a;
         }
 
-        .cta-section {
+        .setup-section {
             background: #fff;
             border-top: 1px solid #e8e6e1;
             border-bottom: 1px solid #e8e6e1;
+            padding: 4rem 2rem;
+        }
+
+        .setup-inner {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .setup-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .setup-section .subtitle {
+            text-align: center;
+            color: #5a5a6a;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .setup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a3a4a;
+            margin-bottom: 0.35rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d4d2cd;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: #1a1a2e;
+            background: #faf9f7;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #4a7c6f;
+        }
+
+        .consent-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .consent-checkbox input[type="checkbox"] {
+            margin-top: 0.3rem;
+            width: 16px;
+            height: 16px;
+            accent-color: #4a7c6f;
+            flex-shrink: 0;
+        }
+
+        .consent-checkbox label {
+            font-size: 0.82rem;
+            color: #5a5a6a;
+            line-height: 1.5;
+        }
+
+        .consent-checkbox label a {
+            color: #4a7c6f;
+        }
+
+        .setup-btn {
+            display: block;
+            width: 100%;
+            padding: 0.85rem;
+            margin-top: 0.5rem;
+            background: #4a7c6f;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .setup-btn:hover {
+            background: #3d6a5f;
+        }
+
+        .sms-disclosure {
+            text-align: center;
+            font-size: 0.78rem;
+            color: #7a7a8c;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .sms-disclosure a {
+            color: #7a7a8c;
+            text-decoration: underline;
+        }
+
+        .contact-section {
             padding: 3.5rem 2rem;
             text-align: center;
         }
 
-        .cta-section p {
+        .contact-section p {
             font-size: 1.05rem;
             color: #5a5a6a;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .cta-email {
+        .contact-email {
             display: inline-block;
             font-family: 'DM Serif Display', serif;
             font-size: 1.2rem;
@@ -162,11 +275,12 @@
             transition: opacity 0.2s;
         }
 
-        .cta-email:hover {
+        .contact-email:hover {
             opacity: 0.7;
         }
 
         .footer {
+            border-top: 1px solid #e8e6e1;
             padding: 2rem;
             text-align: center;
             color: #7a7a8c;
@@ -204,7 +318,7 @@
     <section class="hero">
         <p class="hero-tagline">Family Communication, Simplified</p>
         <h1>The answering machine for the text era</h1>
-        <p>The Memo is a home device that lets parents text their kids — and lets kids talk back. No smartphone required.</p>
+        <p>The Memo is a home device that lets parents text their kids &mdash; and lets kids talk back. No smartphone required.</p>
     </section>
 
     <section class="how-it-works">
@@ -228,9 +342,50 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <p>The Memo is currently in development. Want to learn more?</p>
-        <a href="mailto:hyukjaelee0319@gmail.com" class="cta-email">hyukjaelee0319@gmail.com</a>
+    <section class="setup-section" id="setup">
+        <div class="setup-inner">
+            <h2>Set up your Memo</h2>
+            <p class="subtitle">Register your device and phone number to start messaging with your family.</p>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label for="parent-name">Parent / Guardian name</label>
+                    <input type="text" id="parent-name" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="parent-email">Email address</label>
+                    <input type="email" id="parent-email" placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="parent-phone">Mobile phone number</label>
+                    <input type="tel" id="parent-phone" placeholder="(555) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="device-id">Memo device ID</label>
+                    <input type="text" id="device-id" placeholder="Found on the back of your device">
+                </div>
+
+                <div class="consent-checkbox">
+                    <input type="checkbox" id="sms-consent">
+                    <label for="sms-consent">
+                        By checking this box, I agree to receive and send SMS messages between my mobile phone and my registered Memo device. Message frequency varies based on family usage. Message and data rates may apply. Reply <strong>STOP</strong> to any message to opt out. Reply <strong>HELP</strong> for support. I have read and agree to The Memo's <a href="/thememohome/terms.html">Terms &amp; Conditions</a> and <a href="/thememohome/privacy.html">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <button class="setup-btn" type="button" onclick="alert('The Memo is currently in early access. Please email hyukjaelee0319@gmail.com to join the waitlist.')">Activate My Memo</button>
+            </div>
+
+            <p class="sms-disclosure">
+                The Memo by One Team Education Corp. Message frequency varies. Msg &amp; data rates may apply.<br>
+                Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.<br>
+                <a href="/thememohome/privacy.html">Privacy Policy</a> &middot; <a href="/thememohome/terms.html">Terms &amp; Conditions</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <p>Questions? Get in touch.</p>
+        <a href="mailto:hyukjaelee0319@gmail.com" class="contact-email">hyukjaelee0319@gmail.com</a>
     </section>
 
     <footer class="footer">
