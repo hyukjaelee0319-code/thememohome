@@ -38,9 +38,7 @@
             text-decoration: none;
         }
 
-        .logo span {
-            color: #4a7c6f;
-        }
+        .logo span { color: #4a7c6f; }
 
         .nav-links a {
             font-size: 0.9rem;
@@ -50,9 +48,7 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: #4a7c6f;
-        }
+        .nav-links a:hover { color: #4a7c6f; }
 
         .hero {
             max-width: 720px;
@@ -62,7 +58,6 @@
         }
 
         .hero-tagline {
-            font-family: 'DM Sans', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 0.15em;
@@ -107,9 +102,7 @@
             gap: 2rem;
         }
 
-        .step {
-            text-align: center;
-        }
+        .step { text-align: center; }
 
         .step-number {
             display: inline-flex;
@@ -132,10 +125,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .step p {
-            font-size: 0.9rem;
-            color: #5a5a6a;
-        }
+        .step p { font-size: 0.9rem; color: #5a5a6a; }
 
         .setup-section {
             background: #fff;
@@ -191,15 +181,25 @@
             transition: border-color 0.2s;
         }
 
-        .form-group input:focus {
-            border-color: #4a7c6f;
+        .form-group input:focus { border-color: #4a7c6f; }
+
+        .form-note {
+            font-size: 0.78rem;
+            color: #7a7a8c;
+            margin-top: 0.25rem;
+        }
+
+        .consent-group {
+            margin-top: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
         }
 
         .consent-checkbox {
             display: flex;
             align-items: flex-start;
             gap: 0.6rem;
-            margin-top: 0.5rem;
         }
 
         .consent-checkbox input[type="checkbox"] {
@@ -216,9 +216,7 @@
             line-height: 1.5;
         }
 
-        .consent-checkbox label a {
-            color: #4a7c6f;
-        }
+        .consent-checkbox label a { color: #4a7c6f; }
 
         .setup-btn {
             display: block;
@@ -236,15 +234,13 @@
             transition: background 0.2s;
         }
 
-        .setup-btn:hover {
-            background: #3d6a5f;
-        }
+        .setup-btn:hover { background: #3d6a5f; }
 
         .sms-disclosure {
             text-align: center;
             font-size: 0.78rem;
             color: #7a7a8c;
-            margin-top: 1rem;
+            margin-top: 1.25rem;
             line-height: 1.6;
         }
 
@@ -275,9 +271,7 @@
             transition: opacity 0.2s;
         }
 
-        .contact-email:hover {
-            opacity: 0.7;
-        }
+        .contact-email:hover { opacity: 0.7; }
 
         .footer {
             border-top: 1px solid #e8e6e1;
@@ -293,9 +287,7 @@
             margin: 0 0.75rem;
         }
 
-        .footer a:hover {
-            color: #4a7c6f;
-        }
+        .footer a:hover { color: #4a7c6f; }
 
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
@@ -342,6 +334,7 @@
         </div>
     </section>
 
+    <!-- OPT-IN / DEVICE SETUP — Call to Action (CTA) -->
     <section class="setup-section" id="setup">
         <div class="setup-inner">
             <h2>Set up your Memo</h2>
@@ -357,27 +350,40 @@
                     <input type="email" id="parent-email" placeholder="you@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="parent-phone">Mobile phone number</label>
+                    <label for="parent-phone">Mobile phone number (optional)</label>
                     <input type="tel" id="parent-phone" placeholder="(555) 123-4567">
+                    <p class="form-note">Used to send and receive messages with your Memo device.</p>
                 </div>
                 <div class="form-group">
                     <label for="device-id">Memo device ID</label>
                     <input type="text" id="device-id" placeholder="Found on the back of your device">
                 </div>
 
-                <div class="consent-checkbox">
-                    <input type="checkbox" id="sms-consent">
-                    <label for="sms-consent">
-                        By checking this box, I agree to receive and send SMS messages between my mobile phone and my registered Memo device. Message frequency varies based on family usage. Message and data rates may apply. Reply <strong>STOP</strong> to any message to opt out. Reply <strong>HELP</strong> for support. I have read and agree to The Memo's <a href="/thememohome/terms.html">Terms &amp; Conditions</a> and <a href="/thememohome/privacy.html">Privacy Policy</a>.
-                    </label>
+                <!-- CHECKBOX 1: SMS Consent (separate, unchecked by default) -->
+                <div class="consent-group">
+                    <div class="consent-checkbox">
+                        <input type="checkbox" id="sms-consent">
+                        <label for="sms-consent">
+                            I agree to receive recurring SMS messages from <strong>The Memo</strong> (by One Team Education Corp) at the phone number provided. Message frequency varies based on family usage. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.
+                        </label>
+                    </div>
+
+                    <!-- CHECKBOX 2: Terms & Privacy (separate checkbox) -->
+                    <div class="consent-checkbox">
+                        <input type="checkbox" id="terms-consent">
+                        <label for="terms-consent">
+                            I have read and agree to The Memo's <a href="/thememohome/terms.html">Terms &amp; Conditions</a> and <a href="/thememohome/privacy.html">Privacy Policy</a>.
+                        </label>
+                    </div>
                 </div>
 
                 <button class="setup-btn" type="button" onclick="alert('The Memo is currently in early access. Please email hyukjaelee0319@gmail.com to join the waitlist.')">Activate My Memo</button>
             </div>
 
             <p class="sms-disclosure">
-                The Memo by One Team Education Corp. Message frequency varies. Msg &amp; data rates may apply.<br>
-                Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.<br>
+                The Memo by One Team Education Corp. Recurring messages. Message frequency varies.<br>
+                Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.<br>
+                No mobile information will be shared with third parties for marketing purposes.<br>
                 <a href="/thememohome/privacy.html">Privacy Policy</a> &middot; <a href="/thememohome/terms.html">Terms &amp; Conditions</a>
             </p>
         </div>
