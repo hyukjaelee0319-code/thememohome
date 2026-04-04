@@ -3,314 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Memo — The Answering Machine for the Text Era</title>
+    <title>The Memo by One Team Education Corp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            color: #1a1a2e;
-            background: #faf9f7;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .header {
-            padding: 2rem 2rem 1.5rem;
-            border-bottom: 1px solid #e8e6e1;
-            background: #fff;
-        }
-
-        .header-inner {
-            max-width: 720px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            text-decoration: none;
-        }
-
+        body { font-family: 'DM Sans', sans-serif; color: #1a1a2e; background: #faf9f7; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid #e8e6e1; background: #fff; }
+        .header-inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: #1a1a2e; text-decoration: none; }
         .logo span { color: #4a7c6f; }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            color: #7a7a8c;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            transition: color 0.2s;
-        }
-
+        .brand-sub { font-size: 0.75rem; color: #7a7a8c; display: block; font-family: 'DM Sans', sans-serif; }
+        .nav-links a { font-size: 0.9rem; color: #7a7a8c; text-decoration: none; margin-left: 1.5rem; transition: color 0.2s; }
         .nav-links a:hover { color: #4a7c6f; }
-
-        .hero {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 5rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .hero-tagline {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #4a7c6f;
-            margin-bottom: 1.25rem;
-        }
-
-        h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.75rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: #1a1a2e;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #5a5a6a;
-            max-width: 540px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .how-it-works {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 2rem 5rem;
-        }
-
-        .how-it-works h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.75rem;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-        }
-
+        .hero { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 4rem; text-align: center; }
+        .hero-tagline { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #4a7c6f; margin-bottom: 1.25rem; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: 2.75rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; color: #1a1a2e; }
+        .hero p { font-size: 1.1rem; color: #5a5a6a; max-width: 540px; margin: 0 auto 2.5rem; }
+        .how-it-works { max-width: 720px; margin: 0 auto; padding: 0 2rem 5rem; }
+        .how-it-works h2 { font-family: 'DM Serif Display', serif; font-size: 1.75rem; font-weight: 400; text-align: center; margin-bottom: 2.5rem; }
+        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
         .step { text-align: center; }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: #f0f5f3;
-            color: #4a7c6f;
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .step h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.1rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-
+        .step-number { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #f0f5f3; color: #4a7c6f; font-weight: 600; font-size: 1rem; margin-bottom: 1rem; }
+        .step h3 { font-family: 'DM Serif Display', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 0.5rem; }
         .step p { font-size: 0.9rem; color: #5a5a6a; }
-
-        .setup-section {
-            background: #fff;
-            border-top: 1px solid #e8e6e1;
-            border-bottom: 1px solid #e8e6e1;
-            padding: 4rem 2rem;
-        }
-
-        .setup-inner {
-            max-width: 520px;
-            margin: 0 auto;
-        }
-
-        .setup-section h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.75rem;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 0.75rem;
-        }
-
-        .setup-section .subtitle {
-            text-align: center;
-            color: #5a5a6a;
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-        }
-
-        .setup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #3a3a4a;
-            margin-bottom: 0.35rem;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid #d4d2cd;
-            border-radius: 8px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            color: #1a1a2e;
-            background: #faf9f7;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
+        .setup-section { background: #fff; border-top: 1px solid #e8e6e1; border-bottom: 1px solid #e8e6e1; padding: 4rem 2rem; }
+        .setup-inner { max-width: 520px; margin: 0 auto; }
+        .setup-section h2 { font-family: 'DM Serif Display', serif; font-size: 1.75rem; font-weight: 400; text-align: center; margin-bottom: 0.75rem; }
+        .setup-section .subtitle { text-align: center; color: #5a5a6a; font-size: 0.95rem; margin-bottom: 2rem; }
+        .setup-form { display: flex; flex-direction: column; gap: 1rem; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 500; color: #3a3a4a; margin-bottom: 0.35rem; }
+        .form-group input { width: 100%; padding: 0.75rem 1rem; border: 1px solid #d4d2cd; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #1a1a2e; background: #faf9f7; outline: none; transition: border-color 0.2s; }
         .form-group input:focus { border-color: #4a7c6f; }
-
-        .form-note {
-            font-size: 0.78rem;
-            color: #7a7a8c;
-            margin-top: 0.25rem;
-        }
-
-        .consent-group {
-            margin-top: 0.75rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .consent-checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-        }
-
-        .consent-checkbox input[type="checkbox"] {
-            margin-top: 0.3rem;
-            width: 16px;
-            height: 16px;
-            accent-color: #4a7c6f;
-            flex-shrink: 0;
-        }
-
-        .consent-checkbox label {
-            font-size: 0.82rem;
-            color: #5a5a6a;
-            line-height: 1.5;
-        }
-
+        .form-note { font-size: 0.78rem; color: #7a7a8c; margin-top: 0.25rem; }
+        .consent-group { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .consent-checkbox { display: flex; align-items: flex-start; gap: 0.6rem; }
+        .consent-checkbox input[type="checkbox"] { margin-top: 0.3rem; width: 16px; height: 16px; accent-color: #4a7c6f; flex-shrink: 0; }
+        .consent-checkbox label { font-size: 0.82rem; color: #5a5a6a; line-height: 1.5; }
         .consent-checkbox label a { color: #4a7c6f; }
-
-        .setup-btn {
-            display: block;
-            width: 100%;
-            padding: 0.85rem;
-            margin-top: 0.5rem;
-            background: #4a7c6f;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
+        .setup-btn { display: block; width: 100%; padding: 0.85rem; margin-top: 0.5rem; background: #4a7c6f; color: #fff; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
         .setup-btn:hover { background: #3d6a5f; }
-
-        .sms-disclosure {
-            text-align: center;
-            font-size: 0.78rem;
-            color: #7a7a8c;
-            margin-top: 1.25rem;
-            line-height: 1.6;
-        }
-
-        .sms-disclosure a {
-            color: #7a7a8c;
-            text-decoration: underline;
-        }
-
-        .contact-section {
-            padding: 3.5rem 2rem;
-            text-align: center;
-        }
-
-        .contact-section p {
-            font-size: 1.05rem;
-            color: #5a5a6a;
-            margin-bottom: 1rem;
-        }
-
-        .contact-email {
-            display: inline-block;
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            color: #4a7c6f;
-            text-decoration: none;
-            border-bottom: 2px solid #4a7c6f;
-            padding-bottom: 2px;
-            transition: opacity 0.2s;
-        }
-
+        .sms-disclosure { text-align: center; font-size: 0.78rem; color: #7a7a8c; margin-top: 1.25rem; line-height: 1.6; }
+        .sms-disclosure a { color: #7a7a8c; text-decoration: underline; }
+        .contact-section { padding: 3.5rem 2rem; text-align: center; }
+        .contact-section p { font-size: 1.05rem; color: #5a5a6a; margin-bottom: 1rem; }
+        .contact-email { display: inline-block; font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: #4a7c6f; text-decoration: none; border-bottom: 2px solid #4a7c6f; padding-bottom: 2px; transition: opacity 0.2s; }
         .contact-email:hover { opacity: 0.7; }
-
-        .footer {
-            border-top: 1px solid #e8e6e1;
-            padding: 2rem;
-            text-align: center;
-            color: #7a7a8c;
-            font-size: 0.85rem;
-        }
-
-        .footer a {
-            color: #7a7a8c;
-            text-decoration: none;
-            margin: 0 0.75rem;
-        }
-
+        .footer { border-top: 1px solid #e8e6e1; padding: 2rem; text-align: center; color: #7a7a8c; font-size: 0.85rem; }
+        .footer a { color: #7a7a8c; text-decoration: none; margin: 0 0.75rem; }
         .footer a:hover { color: #4a7c6f; }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .steps { grid-template-columns: 1fr; gap: 2rem; }
-            .nav-links a { margin-left: 1rem; }
-        }
+        @media (max-width: 600px) { h1 { font-size: 2rem; } .steps { grid-template-columns: 1fr; gap: 2rem; } .nav-links a { margin-left: 1rem; } }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/thememohome/" class="logo">The <span>Memo</span></a>
+            <a href="/" class="logo">
+                One Team Education Corp
+                <span class="brand-sub">The Memo</span>
+            </a>
             <nav class="nav-links">
-                <a href="/thememohome/privacy.html">Privacy</a>
-                <a href="/thememohome/terms.html">Terms</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <p class="hero-tagline">Family Communication, Simplified</p>
-        <h1>The answering machine for the text era</h1>
-        <p>The Memo is a home device that lets parents text their kids &mdash; and lets kids talk back. No smartphone required.</p>
+        <p class="hero-tagline">One Team Education Corp</p>
+        <h1>The Memo</h1>
+        <p>A household communication device that lets family members exchange messages between their phones and home &mdash; no smartphone needed at home.</p>
     </section>
 
     <section class="how-it-works">
@@ -318,31 +80,30 @@
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Parents text</h3>
+                <h3>Send a text</h3>
                 <p>Send an SMS to your Memo's number, just like texting anyone else.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3>Kids hear &amp; read</h3>
+                <h3>Hear &amp; read</h3>
                 <p>The Memo displays the message on screen and reads it aloud.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Kids reply by voice</h3>
-                <p>Children tap to record a message. It's transcribed and texted back to you.</p>
+                <h3>Reply by voice</h3>
+                <p>Record a voice message. It's transcribed and texted back to you.</p>
             </div>
         </div>
     </section>
 
-    <!-- OPT-IN / DEVICE SETUP — Call to Action (CTA) -->
     <section class="setup-section" id="setup">
         <div class="setup-inner">
             <h2>Set up your Memo</h2>
-            <p class="subtitle">Register your device and phone number to start messaging with your family.</p>
+            <p class="subtitle">Register your device and phone number to start messaging with your household.</p>
 
             <div class="setup-form">
                 <div class="form-group">
-                    <label for="parent-name">Parent / Guardian name</label>
+                    <label for="parent-name">Name</label>
                     <input type="text" id="parent-name" placeholder="Jane Doe">
                 </div>
                 <div class="form-group">
@@ -359,43 +120,35 @@
                     <input type="text" id="device-id" placeholder="Found on the back of your device">
                 </div>
 
-                <!-- CHECKBOX 1: SMS Consent (separate, unchecked by default) -->
                 <div class="consent-group">
                     <div class="consent-checkbox">
                         <input type="checkbox" id="sms-consent">
                         <label for="sms-consent">
-                            By checking, you are allowing to receive <strong>transactional/informational SMS</strong> communications regarding family voice messages, delivery notifications, and service alerts from <strong>The Memo</strong>. Messages frequency may vary. Data rates may apply, reply <strong>STOP</strong> to opt-out. Reply <strong>HELP</strong> for help or email hyukjaelee0319@gmail.com. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.
+                            By checking, you are allowing to receive <strong>transactional/informational SMS</strong> communications regarding family voice messages, delivery notifications, and service alerts from <strong>One Team Education Corp</strong> ("The Memo"). Messages frequency may vary. Data rates may apply, reply <strong>STOP</strong> to opt-out. Reply <strong>HELP</strong> for help or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="224b4c444d624d4c475647434f4746574143564b4d4c0c414d4f">[email&#160;protected]</a>. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.
                         </label>
                     </div>
 
-                    <!-- CHECKBOX 2: Terms & Privacy (separate checkbox) -->
                     <div class="consent-checkbox">
                         <input type="checkbox" id="terms-consent">
                         <label for="terms-consent">
-                            I have read and agree to The Memo's <a href="/thememohome/terms.html">Terms &amp; Conditions</a> and <a href="/thememohome/privacy.html">Privacy Policy</a>.
+                            I have read and agree to One Team Education Corp's <a href="/terms.html">Terms &amp; Conditions</a> and <a href="/privacy.html">Privacy Policy</a>.
                         </label>
                     </div>
                 </div>
 
-                <button class="setup-btn" type="button" onclick="alert('The Memo is currently in early access. Please email hyukjaelee0319@gmail.com to join the waitlist.')">Activate My Memo</button>
+                <button class="setup-btn" type="button" onclick="alert('The Memo is currently in early access. Please email info@oneteameducation.com to join the waitlist.')">Activate My Memo</button>
             </div>
 
             <p class="sms-disclosure">
-                The Memo: Transactional/informational SMS regarding family voice messages, delivery notifications, and service alerts.<br>
+                One Team Education Corp ("The Memo"): Transactional/informational SMS regarding family voice messages, delivery notifications, and service alerts.<br>
                 Recurring messages. Message frequency varies. Msg &amp; data rates may apply.<br>
-                Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help or email hyukjaelee0319@gmail.com.<br>
+                Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f565159507f50515a4b5a5e525a5b4a5c5e4b565051115c5052">[email&#160;protected]</a>.<br>
                 No mobile information will be shared with third parties for marketing purposes.<br>
-                <a href="/thememohome/privacy.html">Privacy Policy</a> &middot; <a href="/thememohome/terms.html">Terms &amp; Conditions</a>
+                <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms &amp; Conditions</a>
             </p>
         </div>
     </section>
 
     <section class="contact-section">
         <p>Questions? Get in touch.</p>
-        <a href="/cdn-cgi/l/email-protection#83ebfaf6e8e9e2e6efe6e6b3b0b2bac3e4eee2eaefade0ecee" class="contact-email"><span class="__cf_email__" data-cfemail="fa92838f91909b9f969f9fcac9cbc3ba9d979b9396d4999597">[email&#160;protected]</span></a>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 The Memo. All rights reserved.</p>
-        <p>
-            <a href="/thememohome/priv
+        <a href="/cdn-cgi/l/email-protection#81e8efe7eec1eeefe4f5e4e0ece4e5f4e2e0f5e8eeefafe2eeec" class="contact-email"><span class="__cf_email__" data-cfemai
